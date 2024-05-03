@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+## What is redux?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Redux is a predictable state container for js appliction.
 
-Currently, two official plugins are available:
+## Why predictable?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Single source of truth
+- Immutable behavior - handle interly with immer function
+- Usage of pure function
+- Unidirectional flow
+- centralize
+- Debuggable
+- Middleware support
 
-## Expanding the ESLint configuration
+## What is pure function?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+A Pure Function is a function (a block of code) that always returns the same result if the same arguments are passed. It does not depend on any state or data change during a program's execution. Rather, it only depends on its input arguments.
 
-- Configure the top-level `parserOptions` property like this:
+## Some terms about redux
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Action : Action taken by the user. Each action has corresponding reducer function.
+- Dispatch : Sending the action object to the store. Dispatch an action trigers the corresponding reducer to update the state.
+- Payload : Optional data that is attached to an action. It carried any additional information that needs to be sent along with the action to update the state.
